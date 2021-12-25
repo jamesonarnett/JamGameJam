@@ -1,5 +1,3 @@
-/* Body && Init style */
-
 :root {
   font-size: 16px;
   font-family: "Times New Roman", Times, serif;
@@ -178,51 +176,7 @@ h1 {
     transition: opacity var(--transition-speed);
   }
 }
-
-/* END */
-
-.container {
-  display: flex;
-  flex-direction: column;
-  margin-left: 5rem;
-}
-
-.gameContainer {
-  display: flex;
-  padding: 15px;
-  margin-left: 5rem;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.game {
-  display: flex;
-  width: 400px;
-  height: 400px;
-  background-color: #e3e3e3;
-  margin: 25px;
-  border-radius: 5%;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-}
-
-.gameTitle {
-  margin: 0 auto;
-  padding-top: 1rem;
-  font-size: 30px;
-}
-
-.gameImage {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 5%;
-}
-
-.linkDecoration {
-  text-decoration: none;
-  color: white;
-}
+/* END NAV */
 
 .footer {
   position: fixed;
@@ -239,22 +193,8 @@ h1 {
   text-align: center;
 }
 
-.regText {
+/* END FOOTER */
+
+h1 {
   text-align: center;
-  padding-right: 4rem;
-  margin-left: 5rem;
-}
-
-/* GAME IMG LIST */
-
-#pong {
-  background-image: url(./pong/pongImg.png);
-}
-
-#catJumps {
-  background-image: url(./catJumps/resizedCat.png);
-}
-
-#snake {
-  background-image: url(./snake/snakegame.png);
 }

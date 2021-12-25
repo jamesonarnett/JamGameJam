@@ -25,12 +25,12 @@ let alive = setInterval(() => {
 
   //collision
 
-  if (obstacleLeft < 80 && charTop >= 230) {
+  if (obstacleLeft < 50 && charTop >= 230) {
     alert("Game over. Jump harder.");
   }
 }, 10);
 
-//totally cheating... but no one will ever know.
+//totally cheating... but, I mean, these are the rules... so is it cheating?
 let scoreInterval = setInterval(() => {
   score++;
   for (let i = 0; i < score; i++) {

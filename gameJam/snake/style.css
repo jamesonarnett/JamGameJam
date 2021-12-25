@@ -14,23 +14,25 @@ h3 {
   margin-left: 35px;
 }
 
-.centerText {
+.title {
   text-align: center;
 }
 
-.center {
-  margin-left: auto;
-  margin-right: auto;
+.centerText {
+  text-align: center;
+  padding: 0.33rem;
+}
+
+#canvas {
   display: block;
-  width: 600px;
-  padding-bottom: 50px;
-  padding-top: 25px;
+  margin: 0 auto;
+  padding-bottom: 2rem;
 }
 
 .buttonBox {
   background-color: black;
   text-align: center;
-  margin-bottom: 12rem;
+  margin-bottom: 6rem;
   margin-left: 25%;
   margin-right: 25%;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
