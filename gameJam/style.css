@@ -10,16 +10,10 @@
 }
 
 body {
-  color: black;
-  background-color: white;
+  color: var(--text-primary);
+  background-color: var(--bg-secondary);
   margin: 0;
   padding: 0 0 2rem 0;
-  background: rgb(208, 208, 208);
-  background: radial-gradient(
-    circle,
-    rgba(208, 208, 208, 1) 0%,
-    rgba(148, 187, 233, 1) 100%
-  );
 }
 
 body::-webkit-scrollbar {
@@ -45,7 +39,7 @@ h1 {
 
 .pretty {
   font-size: 50px;
-  color: #230075;
+  color: #3905b4;
 }
 
 .navbar {
@@ -156,8 +150,21 @@ h1 {
     justify-content: center;
   }
 
+  .link-text {
+    padding-bottom: 0rem !important;
+    display: none !important;
+  }
+
   main {
     margin: 0;
+  }
+
+  .container {
+    margin-left: 0rem;
+  }
+  .gameContainer {
+    margin-left: 0rem;
+    margin-bottom: 5rem;
   }
 }
 
@@ -177,6 +184,23 @@ h1 {
     display: inline;
     transition: opacity var(--transition-speed);
   }
+  .nav-item {
+    width: 100%;
+    padding-bottom: 2rem;
+  }
+
+  .container {
+    margin-left: 5rem;
+  }
+
+  .gameContainer {
+    margin-left: 5rem;
+  }
+
+  .regText {
+    width: 40%;
+    margin: auto;
+  }
 }
 
 /* END */
@@ -184,13 +208,11 @@ h1 {
 .container {
   display: flex;
   flex-direction: column;
-  margin-left: 5rem;
 }
 
 .gameContainer {
   display: flex;
   padding: 15px;
-  margin-left: 5rem;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -235,14 +257,13 @@ h1 {
 }
 
 .footerText {
-  color: white;
+  color: var(--text-primary);
   text-align: center;
 }
 
 .regText {
   text-align: center;
-  padding-right: 4rem;
-  margin-left: 5rem;
+  color: var(--text-primary);
 }
 
 /* GAME IMG LIST */

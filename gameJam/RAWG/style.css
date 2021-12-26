@@ -67,10 +67,12 @@ h1 {
 
 .nav-item {
   width: 100%;
+  padding-bottom: 2rem;
 }
 
 .nav-item:last-child {
   margin-top: auto;
+  padding-bottom: 0;
 }
 
 .nav-link {

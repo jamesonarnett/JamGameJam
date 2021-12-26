@@ -13,7 +13,14 @@ window.addEventListener(
 
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
+const pause = document.getElementById("pause");
+const start = document.getElementById("resume");
 
+const easyButton = document.getElementById("easy");
+const normalButton = document.getElementById("normal");
+const hardButton = document.getElementById("hard");
+
+let paused = false;
 const box = 32;
 
 const ground = new Image();
@@ -80,58 +87,82 @@ function collision(head, array) {
 }
 
 function draw() {
-  ctx.drawImage(ground, 0, 0);
+  if (!paused) {
+    ctx.drawImage(ground, 0, 0);
 
-  for (let i = 0; i < snake.length; i++) {
-    ctx.fillStyle = i == 0 ? "green" : "white";
-    ctx.fillRect(snake[i].x, snake[i].y, box, box);
+    for (let i = 0; i < snake.length; i++) {
+      ctx.fillStyle = i == 0 ? "green" : "white";
+      ctx.fillRect(snake[i].x, snake[i].y, box, box);
 
-    ctx.strokeStyle = "red";
-    ctx.strokeRect(snake[i].x, snake[i].y, box, box);
-  }
+      ctx.strokeStyle = "red";
+      ctx.strokeRect(snake[i].x, snake[i].y, box, box);
+    }
 
-  ctx.drawImage(foodImg, food.x, food.y);
+    ctx.drawImage(foodImg, food.x, food.y);
 
-  let snakeX = snake[0].x;
-  let snakeY = snake[0].y;
+    let snakeX = snake[0].x;
+    let snakeY = snake[0].y;
 
-  if (d == "LEFT") snakeX -= box;
-  if (d == "UP") snakeY -= box;
-  if (d == "RIGHT") snakeX += box;
-  if (d == "DOWN") snakeY += box;
+    if (d == "LEFT") snakeX -= box;
+    if (d == "UP") snakeY -= box;
+    if (d == "RIGHT") snakeX += box;
+    if (d == "DOWN") snakeY += box;
 
-  if (snakeX == food.x && snakeY == food.y) {
-    score++;
-    eat.play();
-    food = {
-      x: Math.floor(Math.random() * 17 + 1) * box,
-      y: Math.floor(Math.random() * 15 + 3) * box,
+    if (snakeX == food.x && snakeY == food.y) {
+      score++;
+      eat.play();
+      food = {
+        x: Math.floor(Math.random() * 17 + 1) * box,
+        y: Math.floor(Math.random() * 15 + 3) * box,
+      };
+    } else {
+      snake.pop();
+    }
+
+    let newHead = {
+      x: snakeX,
+      y: snakeY,
     };
-  } else {
-    snake.pop();
+
+    if (
+      snakeX < box ||
+      snakeX > 17 * box ||
+      snakeY < 3 * box ||
+      snakeY > 17 * box ||
+      collision(newHead, snake)
+    ) {
+      clearInterval(game);
+      dead.play();
+    }
+
+    snake.unshift(newHead);
+
+    ctx.fillStyle = "white";
+    ctx.font = "45px sans";
+    ctx.fillText(score, 2 * box, 1.6 * box);
   }
-
-  let newHead = {
-    x: snakeX,
-    y: snakeY,
-  };
-
-  if (
-    snakeX < box ||
-    snakeX > 17 * box ||
-    snakeY < 3 * box ||
-    snakeY > 17 * box ||
-    collision(newHead, snake)
-  ) {
-    clearInterval(game);
-    dead.play();
-  }
-
-  snake.unshift(newHead);
-
-  ctx.fillStyle = "white";
-  ctx.font = "45px sans";
-  ctx.fillText(score, 2 * box, 1.6 * box);
 }
 
-let game = setInterval(draw, 100);
+easyButton.addEventListener("click", (event) => {
+  let loop = (framePerSecond) => {
+    setInterval(draw, 100 / framePerSecond);
+  };
+
+  loop(0.5);
+});
+
+normalButton.addEventListener("click", (event) => {
+  let loop = (framePerSecond) => {
+    setInterval(draw, 100 / framePerSecond);
+  };
+
+  loop(1);
+});
+
+hardButton.addEventListener("click", (event) => {
+  let loop = (framePerSecond) => {
+    setInterval(draw, 100 / framePerSecond);
+  };
+
+  loop(2);
+});
