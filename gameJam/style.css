@@ -5,13 +5,13 @@
   font-family: "Times New Roman", Times, serif;
   --text-primary: #b6b6b6;
   --text-secondary: #ececec;
-  --bg-primary: #23232e;
+  --bg-primary: #0c0032;
   --bg-secondary: #141418;
 }
 
 body {
   color: var(--text-primary);
-  background-color: var(--bg-secondary);
+  background-color: #282828;
   margin: 0;
   padding: 0 0 2rem 0;
 }
@@ -39,7 +39,7 @@ h1 {
 
 .pretty {
   font-size: 50px;
-  color: #3905b4;
+  color: #1600d8;
 }
 
 .navbar {
@@ -65,6 +65,7 @@ h1 {
 
 .nav-item:last-child {
   margin-top: auto;
+  padding-bottom: 0;
 }
 
 .nav-link {
@@ -208,6 +209,12 @@ h1 {
 .container {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  margin: 0 auto;
+  background-color: var(--bg-primary);
+  opacity: 90%;
+  padding-bottom: 1rem;
 }
 
 .gameContainer {
@@ -221,7 +228,6 @@ h1 {
   display: flex;
   width: 400px;
   height: 400px;
-  background-color: #e3e3e3;
   margin: 25px;
   border-radius: 5%;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
@@ -236,8 +242,6 @@ h1 {
 }
 
 .gameImage {
-  max-width: 90%;
-  max-height: 90%;
   border-radius: 5%;
 }
 
@@ -277,5 +281,9 @@ h1 {
 }
 
 #snake {
-  background-image: url(./snake/snakegame.png);
+  background-image: url(./snake/snakeSmall.png);
+}
+
+#antiGravityBird {
+  background-image: url(flappyBird/antiGravityBirdSmall.png);
 }

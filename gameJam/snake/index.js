@@ -11,6 +11,10 @@ window.addEventListener(
   false
 );
 
+// year at bottom
+const year = document.getElementById("year");
+year.textContent = new Date().getFullYear();
+
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 const pause = document.getElementById("pause");
