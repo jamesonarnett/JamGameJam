@@ -14,6 +14,7 @@ body {
   margin: 0;
   padding: 0 0 2rem 0;
 }
+
 svg {
   fill: white;
   opacity: 90%;
@@ -217,4 +218,83 @@ h1 {
 .footerText {
   color: white;
   text-align: center;
+}
+
+.pokemon {
+  background-color: var(--text-primary);
+  color: black;
+  text-align: center;
+  padding: 0.5rem;
+  width: 400px;
+  align-self: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.name {
+  font-size: 35px;
+}
+
+/* pokedex styles */
+
+#pokedex {
+  padding-inline-start: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 20px;
+}
+
+.poketainer {
+  padding: 40px;
+  margin-left: 5rem;
+}
+
+.card {
+  list-style: none;
+  padding: 40px;
+  background-color: var(--text-primary);
+  color: #222;
+  text-align: center;
+  width: 200px;
+  margin: 0 25px;
+}
+
+.card:hover {
+  animation: bounce 0.5s linear;
+}
+
+.cardImg {
+  height: 180px;
+}
+.cardTitle {
+  text-transform: capitalize;
+  margin-bottom: 0px;
+  font-size: 32px;
+  font-weight: normal;
+}
+.cardText {
+  margin-top: 5px;
+  color: #666;
+  font-weight: lighter;
+}
+
+@keyframes bounce {
+  20% {
+    transform: translateY(-6px);
+  }
+  40% {
+    transform: translateY(0px);
+  }
+
+  80% {
+    transform: translateY(-2px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }

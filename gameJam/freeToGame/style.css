@@ -15,6 +15,11 @@ body {
   padding: 0 0 2rem 0;
 }
 
+svg {
+  fill: white;
+  opacity: 90%;
+}
+
 body::-webkit-scrollbar {
   width: 0.25rem;
 }
@@ -151,8 +156,21 @@ h1 {
     justify-content: center;
   }
 
+  .link-text {
+    padding-bottom: 0rem !important;
+    display: none !important;
+  }
+
   main {
     margin: 0;
+  }
+
+  .container {
+    margin-left: 0rem;
+  }
+  .gameContainer {
+    margin-left: 0rem;
+    margin-bottom: 5rem;
   }
 }
 
@@ -172,8 +190,21 @@ h1 {
     display: inline;
     transition: opacity var(--transition-speed);
   }
+  .nav-item {
+    width: 100%;
+    padding-bottom: 2rem;
+  }
+
+  .regText {
+    width: 40%;
+    margin: auto;
+  }
+  .title {
+    margin-left: 5rem;
+  }
 }
 
+/* END */
 .footer {
   position: fixed;
   bottom: 0;

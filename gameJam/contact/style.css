@@ -1,23 +1,23 @@
+/* Body && Init style */
+
 :root {
   font-size: 16px;
   font-family: "Times New Roman", Times, serif;
   --text-primary: #b6b6b6;
   --text-secondary: #ececec;
-  --bg-primary: #23232e;
+  --bg-primary: #0c0032;
   --bg-secondary: #141418;
 }
-
 body {
-  color: black;
-  background-color: white;
+  color: var(--text-primary);
+  background-color: var(--bg-secondary);
   margin: 0;
   padding: 0 0 2rem 0;
-  background: rgb(208, 208, 208);
-  background: radial-gradient(
-    circle,
-    rgba(208, 208, 208, 1) 0%,
-    rgba(148, 187, 233, 1) 100%
-  );
+}
+
+svg {
+  fill: white;
+  opacity: 90%;
 }
 
 body::-webkit-scrollbar {
@@ -65,10 +65,12 @@ h1 {
 
 .nav-item {
   width: 100%;
+  padding-bottom: 2rem;
 }
 
 .nav-item:last-child {
   margin-top: auto;
+  padding-bottom: 0;
 }
 
 .nav-link {
@@ -154,8 +156,21 @@ h1 {
     justify-content: center;
   }
 
+  .link-text {
+    padding-bottom: 0rem !important;
+    display: none !important;
+  }
+
   main {
     margin: 0;
+  }
+
+  .container {
+    margin-left: 0rem;
+  }
+  .gameContainer {
+    margin-left: 0rem;
+    margin-bottom: 5rem;
   }
 }
 
@@ -175,9 +190,21 @@ h1 {
     display: inline;
     transition: opacity var(--transition-speed);
   }
-}
-/* END NAV */
+  .nav-item {
+    width: 100%;
+    padding-bottom: 2rem;
+  }
 
+  .regText {
+    width: 40%;
+    margin: auto;
+  }
+  .title {
+    margin-left: 5rem;
+  }
+}
+
+/* END */
 .footer {
   position: fixed;
   bottom: 0;
@@ -190,11 +217,5 @@ h1 {
 
 .footerText {
   color: white;
-  text-align: center;
-}
-
-/* END FOOTER */
-
-h1 {
   text-align: center;
 }

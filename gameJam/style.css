@@ -11,9 +11,14 @@
 
 body {
   color: var(--text-primary);
-  background-color: #282828;
+  background-color: var(--bg-secondary);
   margin: 0;
   padding: 0 0 2rem 0;
+}
+
+svg {
+  fill: white;
+  opacity: 90%;
 }
 
 body::-webkit-scrollbar {
@@ -190,12 +195,12 @@ h1 {
     padding-bottom: 2rem;
   }
 
-  .container {
+  /* .container {
     margin-left: 5rem;
-  }
+  } */
 
   .gameContainer {
-    margin-left: 5rem;
+    margin-left: 1.5rem;
   }
 
   .regText {
@@ -210,10 +215,8 @@ h1 {
   display: flex;
   flex-direction: column;
   width: 100%;
-  justify-content: center;
   margin: 0 auto;
   background-color: var(--bg-primary);
-  opacity: 90%;
   padding-bottom: 1rem;
 }
 
