@@ -198,6 +198,7 @@ h1 {
   .regText {
     width: 40%;
     margin: auto;
+    font-size: 18px;
   }
   .title {
     margin-left: 5rem;
@@ -218,6 +219,11 @@ h1 {
 .footerText {
   color: white;
   text-align: center;
+}
+
+.regText {
+  text-align: center;
+  color: var(--text-primary);
 }
 
 /* gamesList */

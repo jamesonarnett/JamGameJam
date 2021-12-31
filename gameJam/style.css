@@ -200,12 +200,13 @@ h1 {
   } */
 
   .gameContainer {
-    margin-left: 1.5rem;
+    margin-left: 70px;
   }
 
   .regText {
     width: 40%;
     margin: auto;
+    font-size: 18px;
   }
 }
 
@@ -222,7 +223,7 @@ h1 {
 
 .gameContainer {
   display: flex;
-  padding: 15px;
+  padding: 20px;
   flex-wrap: wrap;
   justify-content: center;
 }
