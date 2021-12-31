@@ -1,0 +1,292 @@
+/* Body && Init style */
+
+:root {
+  font-size: 16px;
+  font-family: "Times New Roman", Times, serif;
+  --text-primary: #b6b6b6;
+  --text-secondary: #ececec;
+  --bg-primary: #0c0032;
+  --bg-secondary: #141418;
+}
+
+body {
+  color: var(--text-primary);
+  background-color: var(--bg-secondary);
+  margin: 0;
+  padding: 0 0 2rem 0;
+}
+
+svg {
+  fill: white;
+  opacity: 90%;
+}
+
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #6649b8;
+}
+
+/* END */
+
+/* NAV */
+
+h1 {
+  text-align: center;
+  font-size: 40px;
+}
+
+.pretty {
+  font-size: 50px;
+  color: #1600d8;
+}
+
+.navbar {
+  position: fixed;
+  background-color: var(--bg-primary);
+  transition: width 400ms ease;
+  z-index: 1;
+}
+
+.navbar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.nav-item {
+  width: 100%;
+}
+
+.nav-item:last-child {
+  margin-top: auto;
+  padding-bottom: 0;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  filter: grayscale(100%) opacity(0.7);
+  transition: var(--transition-speed);
+}
+
+.nav-link:hover {
+  filter: grayscale(0%) opacity(1);
+  background-color: var(--bg-secondary);
+  color: var(--text-secondary);
+}
+.link-text {
+  display: none;
+  margin-left: 1rem;
+}
+
+.nav-link svg {
+  width: 2rem;
+  min-width: 2rem;
+  margin: 0 1.5rem;
+}
+
+.navbar:hover .link-text {
+  display: block;
+}
+
+.fa-primary {
+  color: #3b01da;
+}
+
+.fa-secondary {
+  color: #230075;
+}
+
+.fa-primary,
+.fa-secondary {
+  transition: var(--transition-speed);
+}
+
+.logo {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  font: 1.5rem;
+  letter-spacing: 0.3ch;
+}
+
+.logo svg {
+  transform: rotate(0deg);
+  transition: transform var(--transition-speed);
+}
+
+.navbar:hover .logo svg {
+  transform: rotate(-180deg);
+}
+
+/* Small screens */
+@media only screen and (max-width: 600px) {
+  .navbar {
+    bottom: 0;
+    width: 100vw;
+    height: 5rem;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .navbar-nav {
+    flex-direction: row;
+  }
+
+  .nav-link {
+    justify-content: center;
+  }
+
+  .link-text {
+    padding-bottom: 0rem !important;
+    display: none !important;
+  }
+
+  main {
+    margin: 0;
+  }
+
+  .container {
+    margin-left: 0rem;
+  }
+  .gameContainer {
+    margin-left: 0rem;
+    margin-bottom: 5rem;
+  }
+}
+
+/* Large screens */
+@media only screen and (min-width: 600px) {
+  .navbar {
+    top: 0;
+    width: 5rem;
+    height: 100vh;
+  }
+
+  .navbar:hover {
+    width: 16rem;
+  }
+
+  .navbar:hover .link-text {
+    display: inline;
+    transition: opacity var(--transition-speed);
+  }
+  .nav-item {
+    width: 100%;
+    padding-bottom: 2rem;
+  }
+
+  /* .container {
+    margin-left: 5rem;
+  } */
+
+  .gameContainer {
+    margin-left: 1.5rem;
+  }
+
+  .regText {
+    width: 40%;
+    margin: auto;
+  }
+}
+
+/* END */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+  background-color: var(--bg-primary);
+  padding-bottom: 1rem;
+}
+
+.gameContainer {
+  display: flex;
+  padding: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.game {
+  display: flex;
+  width: 400px;
+  height: 400px;
+  margin: 25px;
+  border-radius: 5%;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.gameTitle {
+  margin: 0 auto;
+  padding-top: 1rem;
+  font-size: 30px;
+}
+
+.gameImage {
+  border-radius: 5%;
+}
+
+.linkDecoration {
+  text-decoration: none;
+  color: white;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  margin-top: auto;
+  width: 100%;
+  height: 3rem;
+  z-index: 0;
+  background-color: var(--bg-secondary);
+}
+
+.footerText {
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.regText {
+  text-align: center;
+  color: var(--text-primary);
+}
+
+/* GAME IMG LIST */
+
+#pong {
+  background-image: url(./pong/pongImg.png);
+}
+
+#catJumps {
+  background-image: url(./catJumps/resizedCat.png);
+}
+
+#snake {
+  background-image: url(./snake/snakeSmall.png);
+}
+
+#antiGravityBird {
+  background-image: url(flappyBird/antiGravityBirdSmall.png);
+}
