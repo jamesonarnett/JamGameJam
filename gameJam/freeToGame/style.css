@@ -219,3 +219,35 @@ h1 {
   color: white;
   text-align: center;
 }
+
+/* gamesList */
+
+.gamesList {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  color: var(--text-secondary);
+}
+
+.game {
+  background-color: var(--bg-primary);
+  text-align: center;
+  width: 500px;
+  margin: 25px;
+}
+
+.gameTitle {
+  font-size: 30px;
+  text-decoration: underline;
+}
+
+.listItemL {
+  list-style: none;
+  float: left;
+}
+
+.listItemR {
+  list-style: none;
+  float: right;
+  margin-right: 1.3rem;
+}
