@@ -291,3 +291,11 @@ h1 {
 #antiGravityBird {
   background-image: url(flappyBird/antiGravityBirdSmall.png);
 }
+
+#blackjack {
+  background-image: url(blackjack/blackMaybe.png);
+}
+
+#jeopardy {
+  background-image: url(jeopardy/smallJ.png);
+}
