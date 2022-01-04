@@ -6,10 +6,10 @@
 # APIs used
 
 <ol>
-  <li>RAWG video game database :: <a href="https://rawg.io/apidocs">RAWG</a> </li>
-  <li>PokeAPI :: <a href="https://pokeapi.co/docs/v2">PokeAPI</a> </li>
-  <li>jService Jeopardy questions :: <a href="http://jservice.io/">jService</a> </li>
-  <li>FreeToGame database :: <a href="https://www.freetogame.com/api-doc">FreeToGame</a> </li>
+  <li>RAWG video game database :: <a target="_blank" href="https://rawg.io/apidocs">RAWG</a> </li>
+  <li>PokeAPI :: <a target="_blank" href="https://pokeapi.co/docs/v2">PokeAPI</a> </li>
+  <li>jService Jeopardy questions :: <a target="_blank" href="http://jservice.io/">jService</a> </li>
+  <li>FreeToGame database :: <a target="_blank" href="https://www.freetogame.com/api-doc">FreeToGame</a> </li>
 
 </ol>
 
