@@ -65,7 +65,6 @@ h1 {
 
 .nav-item {
   width: 100%;
-  padding-bottom: 2rem;
 }
 
 .nav-item:last-child {
@@ -233,6 +232,7 @@ h1 {
   justify-content: center;
   flex-wrap: wrap;
   color: var(--text-secondary);
+  padding-bottom: 5rem;
 }
 
 .game {

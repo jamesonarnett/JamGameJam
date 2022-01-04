@@ -14,6 +14,7 @@ body {
   background-color: var(--bg-secondary);
   margin: 0;
   padding: 0 0 2rem 0;
+  font-family: "Times New Roman", Times, serif !important;
 }
 
 svg {
@@ -44,7 +45,7 @@ h1 {
 
 .pretty {
   font-size: 50px;
-  color: #1600d8;
+  color: #729fcf;
 }
 
 .navbar {
@@ -94,6 +95,12 @@ h1 {
 }
 
 .nav-link svg {
+  width: 2rem;
+  min-width: 2rem;
+  margin: 0 1.5rem;
+}
+
+.navImg {
   width: 2rem;
   min-width: 2rem;
   margin: 0 1.5rem;
@@ -172,6 +179,26 @@ h1 {
     margin-left: 0rem;
     margin-bottom: 5rem;
   }
+
+  .robo1 {
+    width: 50px;
+    height: 50px;
+  }
+
+  .robo2 {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* Biggest screen  */
+@media only screen and (min-width: 1200px) {
+  .gameContainer {
+    margin-left: 70px;
+  }
+  .container {
+    padding-left: 35px;
+  }
 }
 
 /* Large screens */
@@ -199,8 +226,14 @@ h1 {
     margin-left: 5rem;
   } */
 
-  .gameContainer {
-    margin-left: 70px;
+  .robo1 {
+    width: 100px;
+    height: 100px;
+  }
+
+  .robo2 {
+    width: 100px;
+    height: 100px;
   }
 
   .regText {

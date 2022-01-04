@@ -2,7 +2,7 @@
 
 :root {
   font-size: 16px;
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Times New Roman", Times, serif !important;
   --text-primary: #b6b6b6;
   --text-secondary: #ececec;
   --bg-primary: #0c0032;
@@ -13,6 +13,7 @@ body {
   background-color: var(--bg-secondary);
   margin: 0;
   padding: 0 0 2rem 0;
+  font-family: "Times New Roman", Times, serif !important;
 }
 
 svg {
@@ -45,7 +46,6 @@ h1 {
   font-size: 50px;
   color: #230075;
 }
-
 .navbar {
   position: fixed;
   background-color: var(--bg-primary);
@@ -65,7 +65,6 @@ h1 {
 
 .nav-item {
   width: 100%;
-  padding-bottom: 2rem;
 }
 
 .nav-item:last-child {
@@ -135,7 +134,6 @@ h1 {
 .navbar:hover .logo svg {
   transform: rotate(-180deg);
 }
-
 /* Small screens */
 @media only screen and (max-width: 600px) {
   .navbar {
@@ -153,7 +151,13 @@ h1 {
   }
 
   .nav-link {
-    justify-content: center;
+    justify-content: center !important;
+    margin-right: 1rem;
+  }
+
+  .nav-item:last-child {
+    margin-top: auto;
+    margin-top: -0.1rem;
   }
 
   .link-text {
@@ -161,12 +165,16 @@ h1 {
     display: none !important;
   }
 
+  .logoRobo {
+    display: none;
+  }
+
   main {
     margin: 0;
   }
 
   .container {
-    margin-left: 0rem;
+    margin: 0 auto;
   }
   .gameContainer {
     margin-left: 0rem;
@@ -227,4 +235,36 @@ h1 {
 .bg-me {
   background-color: var(--bg-primary);
   padding: 25px 0 25px 0;
+}
+
+.center {
+  text-align: center;
+}
+
+.rotateR {
+  animation: rotationR 10s infinite linear;
+}
+
+@keyframes rotationR {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+/* space for the eyesssss */
+
+.rotateL {
+  animation: rotationL 10s infinite linear;
+}
+
+@keyframes rotationL {
+  from {
+    transform: rotate(359deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
 }

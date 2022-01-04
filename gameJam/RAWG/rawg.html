@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RAWG API</title>
+    <link rel="stylesheet" href="bootstrap.min.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <nav class="navbar">
@@ -93,14 +94,38 @@
     </ul>
   </nav>
   <body>
-    <h1>
-      RAWG
-      <span style="color: #1a006e"
-        ><span style="font-size: 56px">G</span>AME</span
+    <div id="hideDiv" class="container">
+      <h1>
+        RAWG
+        <span style="color: #1a006e"
+          ><span style="font-size: 56px">G</span>AME</span
+        >
+        Database
+      </h1>
+      <hr style="width: 100%; color: #ececec" />
+    </div>
+
+    <div id="textInputDiv" class="textInputDiv">
+      <p class="hideP" id="hideP">Search for a game?</p>
+      <input
+        class="form-control form-control-lg"
+        id="input"
+        type="text"
+        placeholder="Enter game name!"
+      />
+      <button
+        style="color: black"
+        class="btn-info btn-lg btn"
+        id="button"
+        type="submit"
       >
-      Database
-    </h1>
-    <hr style="width: 100%; color: #ececec" />
+        Find your game!
+      </button>
+      <hr id="line" class="hidden" style="width: 110%; color: #ececec" />
+    </div>
+
+    <div id="content" class="gameContainer"></div>
+
     <footer class="footer">
       <p class="footerText">
         Thanks for coming &#10084; --Jam <span id="year">year</span>
