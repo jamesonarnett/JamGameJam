@@ -105,6 +105,12 @@ h1 {
   margin: 0 1.5rem;
 }
 
+.navImg {
+  width: 2rem;
+  min-width: 2rem;
+  margin: 0 1.5rem;
+}
+
 .navbar:hover .link-text {
   display: block;
 }
@@ -188,6 +194,11 @@ h1 {
     margin-left: -2rem;
     width: 120vw !important;
   }
+
+  .regText {
+    width: 80%;
+    margin: 0 auto;
+  }
 }
 
 /* Large screens */
@@ -212,6 +223,7 @@ h1 {
   }
 
   .regText {
+    font-size: 16px;
     width: 40%;
     margin: auto;
   }

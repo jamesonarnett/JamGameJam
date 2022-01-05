@@ -1,5 +1,8 @@
 /* Body && Init style */
 
+label {
+  color: black;
+}
 :root {
   font-size: 16px;
   font-family: "Times New Roman", Times, serif !important;
@@ -98,6 +101,12 @@ h1 {
   margin: 0 1.5rem;
 }
 
+.navImg {
+  width: 2rem;
+  min-width: 2rem;
+  margin: 0 1.5rem;
+}
+
 .navbar:hover .link-text {
   display: block;
 }
@@ -124,6 +133,7 @@ h1 {
   background: var(--bg-secondary);
   font: 1.5rem;
   letter-spacing: 0.3ch;
+  margin-top: -10px;
 }
 
 .logo svg {
