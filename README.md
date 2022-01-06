@@ -14,3 +14,4 @@
 </ol>
 
 <img src="jamGameImg.png" alt="JamGameJam website screenshot img" />
+<img src="/gameJam/otherImgs/jamGameJamPhone.png" alt="JGJ phone sized image"/>
