@@ -165,6 +165,7 @@ h1 {
 
   .nav-link {
     justify-content: center;
+    filter: grayscale(50%) opacity(1) !important;
   }
 
   .link-text {
@@ -245,6 +246,9 @@ h1 {
     margin: auto;
     font-size: 18px;
   }
+  .game {
+    opacity: 80%;
+  }
 }
 
 /* END */
@@ -276,10 +280,16 @@ h1 {
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
+.game:hover {
+  color: black;
+  opacity: 100%;
+}
+
 .gameTitle {
   margin: 0 auto;
   padding-top: 1rem;
   font-size: 30px;
+  color: black;
 }
 
 .gameImage {
@@ -335,4 +345,8 @@ h1 {
 
 #jeopardy {
   background-image: url(jeopardy/smallJ.png);
+}
+
+#doodler {
+  background-image: url(doodle/doodlerImg.png);
 }

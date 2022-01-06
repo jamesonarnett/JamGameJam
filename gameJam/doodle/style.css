@@ -1,11 +1,7 @@
 body {
+  margin: 0;
   height: 100vh;
   background-color: grey;
-}
-
-h1 {
-  padding: 1rem;
-  font-weight: 900;
 }
 
 h3 {
@@ -14,30 +10,33 @@ h3 {
   margin-left: 35px;
 }
 
-.title {
+.grid {
+  margin: 5rem auto;
+  width: 400px;
+  height: 600px;
+  background-image: url(./background.png);
+  position: relative;
+  font-size: 100px;
   text-align: center;
+}
+
+.doodler {
+  width: 87px;
+  height: 85px;
+  background-image: url(doodler-guy.png);
+  position: absolute;
+}
+
+.platform {
+  width: 85px;
+  height: 15px;
+  background-image: url(platform.png);
+  position: absolute;
 }
 
 .centerText {
   text-align: center;
-  padding: 0.33rem;
-}
-
-#canvas {
-  display: block;
-  margin: 0 auto;
-  padding-bottom: 2rem;
-}
-
-.buttonBox {
-  background-color: black;
-  text-align: center;
-  margin-bottom: 6rem;
-  margin-left: 25%;
-  margin-right: 25%;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  padding-top: 2rem;
 }
 
 .arrow {
@@ -49,7 +48,7 @@ h3 {
   padding-bottom: 5rem;
   padding-top: 2rem;
   background-color: #58565c;
-  margin-top: 13rem;
+  margin-top: 18rem;
 }
 
 .list {
@@ -81,25 +80,9 @@ h3 {
 .footerText {
   color: white;
   text-align: center;
-  padding-top: 1rem;
+  padding-top: 0.5rem;
 }
 
 .icon {
   font-size: 64px;
-}
-
-.flash {
-  animation: flash 2s 3;
-}
-
-@keyframes flash {
-  0%,
-  50%,
-  100% {
-    opacity: 1;
-  }
-  25%,
-  75% {
-    opacity: 0.1;
-  }
 }

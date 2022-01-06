@@ -50,7 +50,7 @@ h1 {
 
 .pretty {
   font-size: 50px;
-  color: #230075;
+  color: #729fcf;
 }
 
 .navbar {
@@ -166,6 +166,7 @@ h1 {
 
   .nav-link {
     justify-content: center;
+    filter: grayscale(50%) opacity(1) !important;
   }
 
   .link-text {
@@ -223,7 +224,7 @@ h1 {
   }
 
   .regText {
-    font-size: 16px;
+    font-size: 18px;
     width: 40%;
     margin: auto;
   }

@@ -40,10 +40,9 @@ h1 {
   text-align: center;
   font-size: 40px;
 }
-
 .pretty {
   font-size: 50px;
-  color: #230075;
+  color: #729fcf;
 }
 
 .navbar {
@@ -159,6 +158,7 @@ h1 {
 
   .nav-link {
     justify-content: center;
+    filter: grayscale(50%) opacity(1) !important;
   }
 
   .link-text {
